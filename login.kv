@@ -1,0 +1,64 @@
+<login>:
+    FloatLayout:
+        size: root.width, root.height
+
+        canvas.before:
+            Rectangle:
+                pos: self.pos
+                size: self.size
+                source: 'im.webp'
+
+        MDCard:
+            
+           # size_hint: .8,.6
+            size_hint:None,None
+            size:"330dp","250dp"
+            pos_hint: {"center_x": 0.5,"center_y":.5}
+            md_bg_color:1,22,1,.2
+            radius:25,25,25,25
+            MDScreen:
+                md_bg_color:1,22,1,.2
+                radius:25,25,25,25
+
+
+                MDLabel:
+                    text: "Login"
+                    #font_name:"Arial"
+                    font_size:"40dp"
+                    theme_text_color: "Custom"
+                    text_color: "blue"
+                    pos_hint: {"center_x": 0.85,"center_y":.85}
+
+
+                MDTextField:
+                    id: user
+                    hint_text: "Type your username"
+                    icon_right: "account"
+                    size_hint_x: None
+                    width:"250dp"
+                    font_size:"18dp"
+                    line_color_focus: 1, 1, 5, 3
+                    pos_hint: {"center_x": .5,"center_y":.65}
+
+                MDTextField:
+                    id: passwd
+                    hint_text: "Type your password"
+                    icon_right: "eye-off"
+                    size_hint_x:None
+                    width:"250dp"
+                    font_size:"18dp"
+                    pos_hint: {"center_x": 0.5,"center_y":.4}
+                    line_color_focus: 1, 1, 5, 3
+                    password: True
+
+                MDRoundFlatButton:
+                    text: "SIGN IN"
+                    font_size:"20dp"
+                    size_hint: .6,.05
+                    pos_hint: {"center_x": 0.5,"center_y":.15}
+                    text_color:"white"
+                    md_bg_color:"blue"
+                    on_press:
+                        root.loginck()
+                        app.root.transition.direction = 'right'
+                

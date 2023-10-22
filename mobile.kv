@@ -1,0 +1,1107 @@
+<MobileView>:
+    sc:sc
+    nav_drawer:nav_drawer
+    md_bg_color:"#1A2035"
+    AnchorLayout:
+        md_bg_color:"#1A2035"
+        anchor_x:'center'
+        anchor_y:'top'
+
+        MDTopAppBar:
+
+            md_bg_color:"#1A2035"
+            #adaptive_height: True
+            left_action_items: [["menu",lambda x:nav_drawer.set_state('toggle')]]
+            right_action_items: [["dots-vertical", lambda x: banner.show()]]
+
+        Image:
+            source:"home.png"
+            size_hint:.3,.1
+                #size:(450,100)
+    MDBanner:
+        id: banner
+        text: ["One line string text example without actions."]
+
+       # vertical_pad: MDTopAppBar.height
+
+
+    MDNavigationLayout:
+        ScreenManager:
+            id:sc
+            Screen:
+                name:"scr1"
+
+
+                ScrollView:
+                    size_hint_y:.85
+                    size_hint_x:1
+                    #pos_hint:{'x':.05,'y':.05}
+                    BoxLayout:
+                        orientation: 'vertical'
+                        padding: 5
+                        spacing: 5
+                        size_hint: 1, None
+                        height: self.minimum_height
+
+                        MDCard:
+                            size_hint_y: None
+                            #height: 100
+                            md_bg_color:"#1A2035"
+                            orientation:'vertical'
+
+                            MDScreen:
+
+                                Label:
+                                    text:"Welcome back, jagan!"
+                                    #halign:"left"
+                                    #valign:"left"
+                                    pos_hint: {"x":.01,"center_y":.6}
+                                    font_size:"17dp"
+                                Label:
+                                    text:"Yesterday I was clever, so I wanted to change the world. Today I am wise, so I am \n changing myself."
+                                    pos_hint: {"center_x":.5,"center_y":.3}
+                                    font_size:13
+                                                                                    ##############1ow
+                        MDCard:
+                            size_hint_y: None
+                            height: "100dp"
+                            md_bg_color:"#1A2035"
+                            #orientation:'vertical'
+                            spacing:10
+                            padding:10
+
+
+                            MDScreen:
+                                md_bg_color:"#1572E8"
+                                radius:5,5,5,5
+
+
+                                MDIconButton:
+                                    icon: "warehouse"
+                                # md_bg_color:"white"
+                                    icon_size: "60sp"
+                                    theme_text_color: "Custom"
+                                    text_color: "white"
+                                    pos_hint: {"center_x": .3, "center_y": .54}
+
+                                #Image:
+                                #   source:"warehouse.png"
+                                #   color:"#1572E8"
+                                #  size_hint:.5,.5
+                                # pos_hint: {"center_x": .3,"center_y":.5}
+
+
+                                Label:
+                                    text:"Yarn stack"
+                                    pos_hint: {"center_x": .55,"center_y":.7}
+                                    font_size:17
+                                Label:
+                                    text:"00000.200kgs"
+                                    pos_hint: {"center_x": .59,"center_y":.45}
+                                    font_size:17
+                                                                                ##################2row
+                        MDCard:
+                            md_bg_color:"#1A2035"
+                            spacing:10
+                            padding:10
+                            size_hint_y:None
+                            height: "100dp"
+                            MDScreen:
+                                radius:5,5,5,5
+                                md_bg_color:"#48ABF7"
+                                MDIconButton:
+                                    icon: "warehouse"
+                                # md_bg_color:"white"
+                                    icon_size: "60sp"
+                                    theme_text_color: "Custom"
+                                    text_color: "white"
+                                    pos_hint: {"center_x": .3, "center_y": .54}
+                                Label:
+                                    text:"Grey Fabric Stock"
+                                    pos_hint: {"center_x": .61,"center_y":.7}
+                                    font_size:17
+                                Label:
+                                    text:"00000.200kgs"
+                                    pos_hint: {"center_x": .59,"center_y":.45}
+                                    font_size:17
+
+
+
+                                                                                ################3 row
+                        MDCard:
+                            md_bg_color:"#1A2035"
+                            spacing:10
+                            padding:10
+                            size_hint_y:None
+                            height: "100dp"
+                            #orientation: 'vertical'
+                            MDScreen:
+                                radius:5,5,5,5
+                                md_bg_color:"#31CE36"
+                                MDIconButton:
+                                    icon: "warehouse"
+                                # md_bg_color:"white"
+                                    icon_size: "60sp"
+                                    theme_text_color: "Custom"
+                                    text_color: "white"
+                                    pos_hint: {"center_x": .3, "center_y": .54}
+                                Label:
+                                    text:"Finishing Fabric Stock"
+                                    pos_hint: {"center_x": .65,"center_y":.7}
+                                    font_size:17
+                                Label:
+                                    text:"00000.200kgs"
+                                    pos_hint: {"center_x": .59,"center_y":.45}
+                                    font_size:17
+
+
+
+                        MDCard:
+                            md_bg_color:"#1A2035"
+                            spacing:10
+                            padding:10
+                            size_hint_y:None
+                            height: "100dp"
+                            #orientation: 'vertical'
+
+                            MDScreen:
+                                md_bg_color:"#6861CE"
+                                radius:5,5,5,5
+                                MDIconButton:
+                                    icon: "warehouse"
+                                    #md_bg_color:"white"
+                                    icon_size: "60sp"
+                                    theme_text_color: "Custom"
+                                    text_color: "white"
+                                    pos_hint: {"center_x": .3, "center_y": .54}
+                                    on_press:
+					                    sc.current="scr2"
+                                Label:
+                                    text:"Garment Stock"
+                                    pos_hint: {"center_x": .59,"center_y":.7}
+                                    font_size:17
+                                Label:
+                                    text:"00000.200kgs"
+                                    pos_hint: {"center_x": .59,"center_y":.45}
+                                    font_size:17
+                                                        #############2row
+
+                        MDCard:
+                            md_bg_color:"#1A2035"
+                            spacing:20
+                            padding:10
+                            size_hint_y:None
+                            height: 500
+                            orientation: 'vertical'
+                            MDCard:
+                                md_bg_color:"#202940"
+                                spacing:0
+                                padding:0
+                                #size_hint_y:.7
+                                MDScreen:
+                                    MDIcon:
+                                        icon: "basketball"
+                                        pos_hint: {"center_x": .23, "center_y": .5}
+                                        color:"#bf8744"
+                                        icon_size:" 102sp"
+
+
+                                    Label:
+                                        text:"972 Lots"
+                                        pos_hint: {"center_x": .395,"center_y":.8}
+                                        font_size:17
+
+                                    Label:
+                                        text:"0 Lots Finished"
+                                        pos_hint: {"center_x": .45,"center_y":.5}
+                                        font_size:17
+                                        color:"grey"
+                                    Label:
+                                        text:"972 Lots Pending"
+
+                                        pos_hint: {"center_x": .47,"center_y":.2}
+                                        font_size:17
+                                        color:"#ffff00"
+
+
+                            MDCard:
+                                md_bg_color:"#202940"
+                                spacing:0
+                                padding:0
+                            # size_hint_y:.7
+                                MDScreen:
+                                    MDIcon:
+                                        icon: "tshirt-crew"
+                                        pos_hint: {"center_x": .23, "center_y": .5}
+                                        color:"#bf8744"
+                                        icon_size:" 102sp"
+                                    Label:
+                                        text:"654 Articles"
+                                        pos_hint: {"center_x": .423,"center_y":.8}
+                                        font_size:17
+                                    Label:
+                                        text:"1 Articles Finished"
+                                        pos_hint: {"center_x": .47,"center_y":.5}
+                                        font_size:17
+                                        color:"grey"
+                                    Label:
+                                        text:"653 Articles Pending"
+
+                                        pos_hint: {"center_x": .49,"center_y":.2}
+                                        font_size:17
+                                        color:"#ffff00"
+                            MDCard:
+                                md_bg_color:"#202940"
+                                spacing:0
+                                padding:0
+                            # size_hint_y:.7
+                                MDScreen:
+                                    MDIcon:
+                                        icon: "bitcoin"
+                                        pos_hint: {"center_x": .23, "center_y": .5}
+                                        color:"#2c9b38"
+                                        icon_size:" 102sp"
+                                    Label:
+                                        text:"Payment Issue"
+                                        pos_hint: {"center_x": .47,"center_y":.8}
+                                        font_size:17
+                                        color:"grey"
+                                    MDIcon:
+                                        icon: "indian1.png"
+                                        pos_hint: {"center_x": .38, "center_y": .53}
+                                    #color:"#2c9b38"
+                                        icon_size:" 102sp"
+
+                            MDCard:
+                                md_bg_color:"#202940"
+                                spacing:0
+                                padding:0
+                                # size_hint_y:.7
+                                MDScreen:
+                                    MDIcon:
+                                        icon: "bitcoin"
+                                        pos_hint: {"center_x": .23, "center_y": .5}
+                                        color:"#2c9b38"
+                                        icon_size:" 102sp"
+                                    Label:
+                                        text:"Payment Issue"
+                                        pos_hint: {"center_x": .47,"center_y":.8}
+                                        font_size:17
+                                        color:"grey"
+                                    MDIcon:
+                                        icon: "indian1.png"
+                                        pos_hint: {"center_x": .38, "center_y": .53}
+                                    #color:"#2c9b38"
+                                        icon_size:" 102sp"
+
+
+                        MDCard:
+                            md_bg_color:"#1A2035"
+                            spacing:20
+                            padding:10
+                            size_hint_y:None
+                            height: 500
+                            orientation: 'vertical'
+                            MDCard:
+                                md_bg_color:"#202940"
+                                spacing:0
+                                padding:0
+                                #size_hint_y:.7
+                                MDScreen:
+                                    MDIcon:
+                                        icon: "store-outline"
+                                        pos_hint: {"center_x": .2, "center_y": .5}
+                                        color:"#bf8744"
+                                        icon_size:" 102sp"
+
+                                    Label:
+                                        text:"583 Purchase Order"
+                                        pos_hint: {"center_x": .523,"center_y":.8}
+                                        font_size:17
+
+
+                                    Label:
+                                        text:"862 Goods Received"
+                                        pos_hint: {"center_x": .52,"center_y":.5}
+                                        font_size:17
+                                        color:"grey"
+                                    Label:
+                                        text:"98 PO Pending"
+                                        pos_hint: {"center_x": .47,"center_y":.2}
+                                        font_size:17
+                                        color:"#ffff00"
+                            MDCard:
+                                md_bg_color:"#202940"
+                                spacing:0
+                                padding:0
+                            # size_hint_y:.7
+                                MDScreen:
+                                    MDIcon:
+                                        icon: "domain"
+                                        pos_hint: {"center_x": .2, "center_y": .5}
+                                        color:"#bf8744"
+
+                                        #icon_size:" 200sp"
+                                    Label:
+                                        text:"1123 Process Issue"
+                                        pos_hint: {"center_x": .52,"center_y":.8}
+                                        font_size:17
+                                        #color:"white"
+
+                                    Label:
+                                        text:"1068 Process Receipt"
+                                        pos_hint: {"center_x": .55,"center_y":.5}
+                                        font_size:17
+                                        color:"grey"
+                                    Label:
+                                        text:"78 Process Pending"
+
+                                        pos_hint: {"center_x": .53,"center_y":.2}
+                                        font_size:17
+                                        color:"#ffff00"
+
+                            MDCard:
+                                md_bg_color:"#202940"
+                                spacing:0
+                                padding:0
+                            # size_hint_y:.7
+                                MDScreen:
+                                    MDIcon:
+                                        icon: "content-cut"
+                                        pos_hint: {"center_x": .2, "center_y": .5}
+                                        color:"#bf8744"
+
+                                        #icon_size:" 200sp"
+                                    Label:
+                                        text:"893 Cutting Issue"
+                                        pos_hint: {"center_x": .52,"center_y":.8}
+                                        font_size:17
+                                        #color:"white"
+
+                                    Label:
+                                        text:"745 Cutting Receipt"
+                                        pos_hint: {"center_x": .55,"center_y":.5}
+                                        font_size:17
+                                        color:"grey"
+                                    Label:
+                                        text:"377 Cut Pending"
+
+                                        pos_hint: {"center_x": .51,"center_y":.2}
+                                        font_size:17
+                                        color:"#ffff00"
+                            MDCard:
+                                md_bg_color:"#202940"
+                                spacing:0
+                                padding:0
+                            # size_hint_y:.7
+                                MDScreen:
+                                    MDIcon:
+                                        icon: "domain"
+                                        pos_hint: {"center_x": .2, "center_y": .5}
+                                        color:"#bf8744"
+
+                                        #icon_size:" 200sp"
+                                    Label:
+                                        text:"1969 Production Issue"
+                                        pos_hint: {"center_x": .55,"center_y":.8}
+                                        font_size:17
+                                        #color:"white"
+
+                                    Label:
+                                        text:"1881 Production Receipt"
+                                        pos_hint: {"center_x": .58,"center_y":.5}
+                                        font_size:17
+                                        color:"grey"
+                                    Label:
+                                        text:"377 Cut Pending"
+
+                                        pos_hint: {"center_x": .51,"center_y":.2}
+                                        font_size:17
+                                        color:"#ffff00"
+
+                        MDCard:
+                            md_bg_color:"#1A2035"
+                            spacing:10
+                            padding:10
+                            size_hint_y:None
+                            height: 130
+                            #orientation: 'vertical'
+                            MDCard:
+                                md_bg_color:"#202940"
+                                spacing:0
+                                padding:0
+                                #size_hint_y:.7
+                                MDScreen:
+                                    MDIcon:
+                                        icon: "chevron-down"
+                                        pos_hint: {"center_x": .1, "center_y": .8}
+                                        color:"#30c43b"
+
+                                        #icon_size:" 200sp"
+                                    Label:
+                                        text:"0.000 KGS"
+                                        pos_hint: {"center_x": .5,"center_y":.7}
+                                        font_size:17
+                                        #color:"white"
+
+                                    Label:
+                                        text:"Today Purchase Order"
+                                        pos_hint: {"center_x": .5,"center_y":.45}
+                                        font_size:17
+                                        color:"#6c5c53"
+
+                            MDCard:
+                                md_bg_color:"#202940"
+                                spacing:0
+                                padding:0
+                            # size_hint_y:.7
+                                MDScreen:
+                                    MDIcon:
+                                        icon: "chevron-down"
+                                        pos_hint: {"center_x": .1, "center_y": .8}
+                                        color:"#30c43b"
+
+                                        #icon_size:" 200sp"
+                                    Label:
+                                        text:"0.000 KGS"
+                                        pos_hint: {"center_x": .5,"center_y":.7}
+                                        font_size:17
+                                        #color:"white"
+
+                                    Label:
+                                        text:"Today Process Issue"
+                                        pos_hint: {"center_x": .5,"center_y":.45}
+                                        font_size:17
+                                        color:"#6c5c53"
+                        MDCard:
+                            md_bg_color:"#1A2035"
+                            spacing:10
+                            padding:10
+                            size_hint_y:None
+                            height: 130
+                            #orientation: 'vertical'
+                            MDCard:
+                                md_bg_color:"#202940"
+                                spacing:0
+                                padding:0
+                                #size_hint_y:.7
+                                MDScreen:
+                                    MDIcon:
+                                        icon: "chevron-down"
+                                        pos_hint: {"center_x": .1, "center_y": .8}
+                                        color:"#30c43b"
+
+                                        #icon_size:" 200sp"
+                                    Label:
+                                        text:"0.000pcs"
+                                        pos_hint: {"center_x": .5,"center_y":.7}
+                                        font_size:17
+                                        #color:"white"
+
+                                    Label:
+                                        text:"Today cutting Issue"
+                                        pos_hint: {"center_x": .5,"center_y":.45}
+                                        font_size:17
+                                        color:"#6c5c53"
+                            MDCard:
+                                md_bg_color:"#202940"
+                                spacing:0
+                                padding:0
+                                # size_hint_y:.7
+                                MDScreen:
+                                    MDIcon:
+                                        icon: "chevron-down"
+                                        pos_hint: {"center_x": .1, "center_y": .8}
+                                        color:"#30c43b"
+
+                                        #icon_size:" 200sp"
+                                    Label:
+                                        text:"0pcs"
+                                        pos_hint: {"center_x": .5,"center_y":.7}
+                                        font_size:17
+                                        #color:"white"
+
+                                    Label:
+                                        text:"Today Production Issue"
+                                        pos_hint: {"center_x": .5,"center_y":.45}
+                                        font_size:17
+                                        color:"#6c5c53"
+
+
+
+                        MDCard:
+                            md_bg_color:"#1A2035"
+                            spacing:10
+                            padding:10
+                            size_hint_y:None
+                            height: 130
+                            #orientation: 'vertical'
+                            MDCard:
+                                md_bg_color:"#202940"
+                                spacing:0
+                                padding:0
+                                #size_hint_y:.7
+                                MDScreen:
+                                    MDIcon:
+                                        icon: "chevron-down"
+                                        pos_hint: {"center_x": .1, "center_y": .8}
+                                        color:"#30c43b"
+
+                                        #icon_size:" 200sp"
+                                    Label:
+                                        text:"0.000pcs"
+                                        pos_hint: {"center_x": .5,"center_y":.7}
+                                        font_size:17
+                                        #color:"white"
+
+                                    Label:
+                                        text:"Today Accessories Issue"
+                                        pos_hint: {"center_x": .5,"center_y":.45}
+                                        font_size:17
+                                        color:"#6c5c53"
+                            MDCard:
+                                md_bg_color:"#202940"
+                                spacing:0
+                                padding:0
+                                # size_hint_y:.7
+                                MDScreen:
+                                    MDIcon:
+                                        icon: "chevron-down"
+                                        pos_hint: {"center_x": .1, "center_y": .8}
+                                        color:"#30c43b"
+
+                                        #icon_size:" 200sp"
+                                    Label:
+                                        text:"0.000pcs"
+                                        pos_hint: {"center_x": .5,"center_y":.7}
+                                        font_size:17
+                                        #color:"white"
+
+                                    Label:
+                                        text:"Today General Issue"
+                                        pos_hint: {"center_x": .5,"center_y":.45}
+                                        font_size:17
+                                        color:"#6c5c53"
+                        MDCard:
+                            md_bg_color:"#1A2035"
+                            spacing:10
+                            padding:10
+                            size_hint_y:None
+                            height: 130
+                            #orientation: 'vertical'
+                            MDCard:
+                                md_bg_color:"#202940"
+                                spacing:0
+                                padding:0
+                                #size_hint_y:.7
+                                MDScreen:
+                                    MDIcon:
+                                        icon: "chevron-down"
+                                        pos_hint: {"center_x": .1, "center_y": .8}
+                                        color:"#30c43b"
+
+                                        #icon_size:" 200sp"
+                                    Label:
+                                        text:"0.000pcs"
+                                        pos_hint: {"center_x": .5,"center_y":.7}
+                                        font_size:17
+                                        #color:"white"
+
+                                    Label:
+                                        text:"Today Goods Received"
+                                        pos_hint: {"center_x": .5,"center_y":.45}
+                                        font_size:17
+                                        color:"#6c5c53"
+                            MDCard:
+                                md_bg_color:"#202940"
+                                spacing:0
+                                padding:0
+                                # size_hint_y:.7
+                                MDScreen:
+                                    MDIcon:
+                                        icon: "chevron-down"
+                                        pos_hint: {"center_x": .1, "center_y": .8}
+                                        color:"#30c43b"
+
+                                        #icon_size:" 200sp"
+                                    Label:
+                                        text:"0.000pcs"
+                                        pos_hint: {"center_x": .5,"center_y":.7}
+                                        font_size:17
+                                        #color:"white"
+
+                                    Label:
+                                        text:"Today Process Received"
+                                        pos_hint: {"center_x": .5,"center_y":.45}
+                                        font_size:17
+                                        color:"#6c5c53"
+
+                        MDCard:
+                            md_bg_color:"#1A2035"
+                            spacing:10
+                            padding:10
+                            size_hint_y:None
+                            height: 120
+                            #orientation: 'vertical'
+                            MDCard:
+                                md_bg_color:"#202940"
+                                spacing:0
+                                padding:0
+                                #size_hint_y:.7
+                                MDScreen:
+                                    MDIcon:
+                                        icon: "chevron-down"
+                                        pos_hint: {"center_x": .1, "center_y": .8}
+                                        color:"#30c43b"
+
+                                        #icon_size:" 200sp"
+                                    Label:
+                                        text:"0.000pcs"
+                                        pos_hint: {"center_x": .5,"center_y":.7}
+                                        font_size:17
+                                        #color:"white"
+
+                                    Label:
+                                        text:"Today Cutting Received"
+                                        pos_hint: {"center_x": .5,"center_y":.45}
+                                        font_size:17
+                                        color:"#6c5c53"
+
+                            MDCard:
+                                md_bg_color:"#202940"
+                                spacing:0
+                                padding:0
+                            # size_hint_y:.7
+                                MDScreen:
+                                    MDIcon:
+                                        icon: "chevron-down"
+                                        pos_hint: {"center_x": .1, "center_y": .8}
+                                        color:"#30c43b"
+
+                                        #icon_size:" 200sp"
+                                    Label:
+                                        text:"0.000pcs"
+                                        pos_hint: {"center_x": .5,"center_y":.7}
+                                        font_size:17
+                                        #color:"white"
+
+                                    Label:
+                                        text:"Today Production Received"
+                                        pos_hint: {"center_x": .5,"center_y":.45}
+                                        font_size:17
+                                        color:"#6c5c53"
+                        MDCard:
+                            md_bg_color:"#1A2035"
+                            spacing:10
+                            padding:10
+                            size_hint_y:None
+                            height: 120
+                            #orientation: 'vertical'
+                            MDCard:
+                                md_bg_color:"#202940"
+                                spacing:0
+                                padding:0
+                                #size_hint_y:.7
+                                MDScreen:
+                                    MDIcon:
+                                        icon: "chevron-down"
+                                        pos_hint: {"center_x": .1, "center_y": .8}
+                                        color:"#30c43b"
+
+                                        #icon_size:" 200sp"
+                                    Label:
+                                        text:"0.000pcs"
+                                        pos_hint: {"center_x": .5,"center_y":.7}
+                                        font_size:17
+                                        #color:"white"
+
+                                    Label:
+                                        text:"Today Payment Issue"
+                                        pos_hint: {"center_x": .5,"center_y":.45}
+                                        font_size:17
+                                        color:"#6c5c53"
+                            MDCard:
+                                md_bg_color:"#202940"
+                                spacing:0
+                                padding:0
+                            # size_hint_y:.7
+                                MDScreen:
+                                    MDIcon:
+                                        icon: "chevron-down"
+                                        pos_hint: {"center_x": .1, "center_y": .8}
+                                        color:"#30c43b"
+
+                                        #icon_size:" 200sp"
+                                    Label:
+                                        text:"0.000pcs"
+                                        pos_hint: {"center_x": .5,"center_y":.7}
+                                        font_size:17
+                                        #color:"white"
+
+                                    Label:
+                                        text:"Today Payment Receipt"
+                                        pos_hint: {"center_x": .5,"center_y":.45}
+                                        font_size:17
+                                        color:"#6c5c53"
+                        MDCard:
+                            md_bg_color:"#1A2035"
+                            spacing:20
+                            padding:10
+                            size_hint_y:None
+                            height: "750dp"
+                            orientation: 'vertical'
+                            MDCard:
+                                md_bg_color:"#202940"
+                                spacing:0
+                                padding:0
+                                MDScreen:
+                                    MDIconButton:
+                                        icon: "indian1.png"
+                                        pos_hint: {"center_x": .1, "center_y": .5}
+                                        theme_text_color: "Custom"
+                                        text_color: "#6861ce"
+                                        #color:"#30c43b"
+                                        icon_size:" 40sp"
+                                        radius:5,5,5,5
+                                    Label:
+                                        text:"862 Goods Received"
+                                        pos_hint: {"center_x": .35,"center_y":.8}
+                                        font_size:17
+                                        #color:"white"
+
+                                    Label:
+                                        text:"444 waiting Bill"
+                                        pos_hint: {"center_x": .31,"center_y":.5}
+                                        font_size:17
+                                        color:"#6c5c53"
+                                    Label:
+                                        text:"269 waiting Payments"
+                                        pos_hint: {"center_x": .37,"center_y":.2}
+                                        font_size:17
+                                        color:"#6c5c53"
+                            MDCard:
+                                md_bg_color:"#202940"
+                                spacing:0
+                                padding:0
+                                MDScreen:
+                                    MDIconButton:
+                                        icon: "indian1.png"
+                                        pos_hint: {"center_x": .1, "center_y": .5}
+                                        radius:5,5,5,5
+                                        icon_size:" 40sp"
+                                    Label:
+                                        text:"1068 Process Received"
+                                        pos_hint: {"center_x": .38,"center_y":.8}
+                                        font_size:17
+                                        #color:"white"
+
+                                    Label:
+                                        text:"534 waiting Bill"
+                                        pos_hint: {"center_x": .31,"center_y":.5}
+                                        font_size:17
+                                        color:"#6c5c53"
+                                    Label:
+                                        text:"309 waiting Payments"
+                                        pos_hint: {"center_x": .37,"center_y":.2}
+                                        font_size:17
+                                        color:"#6c5c53"
+                            MDCard:
+                                md_bg_color:"#202940"
+                                spacing:0
+                                padding:0
+                                MDScreen:
+                                    MDIconButton:
+                                        icon: "indian1.png"
+                                        pos_hint: {"center_x": .1, "center_y": .5}
+                                        theme_text_color: "Custom"
+                                        text_color: "#6861ce"
+                                        #color:"#30c43b"
+
+                                        icon_size:" 40sp"
+                                    Label:
+                                        text:"745 Process Received"
+                                        pos_hint: {"center_x": .37,"center_y":.8}
+                                        font_size:17
+                                        #color:"white"
+
+                                    Label:
+                                        text:"385 waiting Bill"
+                                        pos_hint: {"center_x": .31,"center_y":.5}
+                                        font_size:17
+                                        color:"#6c5c53"
+                                    Label:
+                                        text:"211 waiting Payments"
+                                        pos_hint: {"center_x": .37,"center_y":.2}
+                                        font_size:17
+                                        color:"#6c5c53"
+                            MDCard:
+                                md_bg_color:"#202940"
+                                spacing:0
+                                padding:0
+                                MDScreen:
+                                    MDIconButton:
+                                        icon: "indian1.png"
+                                        pos_hint: {"center_x": .1, "center_y": .5}
+                                        theme_text_color: "Custom"
+                                        text_color: "#6861ce"
+                                        #color:"#30c43b"
+
+                                        icon_size:" 40sp"
+                                    Label:
+                                        text:"1881 Production Received"
+                                        pos_hint: {"center_x": .41,"center_y":.8}
+                                        font_size:17
+                                        #color:"white"
+
+                                    Label:
+                                        text:"754 waiting Bill"
+                                        pos_hint: {"center_x": .315,"center_y":.5}
+                                        font_size:17
+                                        color:"#6c5c53"
+                                    Label:
+                                        text:"674 waiting Payments"
+                                        pos_hint: {"center_x": .375,"center_y":.2}
+                                        font_size:17
+                                        color:"#6c5c53"
+                            MDCard:
+                                md_bg_color:"#202940"
+                                spacing:0
+                                padding:0
+                                MDScreen:
+                                    MDIconButton:
+                                        icon: "indian1.png"
+                                        pos_hint: {"center_x": .1, "center_y": .5}
+                                        theme_text_color: "Custom"
+                                        text_color: "#6861ce"
+                                        #color:"#30c43b"
+
+                                        icon_size:" 40sp"
+                                    Label:
+                                        text:"209 Articles Inward"
+                                        pos_hint: {"center_x": .36,"center_y":.8}
+                                        font_size:17
+                                        #color:"white"
+
+                                    Label:
+                                        text:"0 waiting Bill"
+                                        pos_hint: {"center_x": .3,"center_y":.5}
+                                        font_size:17
+                                        color:"#6c5c53"
+                                    Label:
+                                        text:"69 waiting Payments"
+                                        pos_hint: {"center_x": .37,"center_y":.2}
+                                        font_size:17
+                                        color:"#6c5c53"
+                            MDCard:
+                                md_bg_color:"#202940"
+                                spacing:0
+                                padding:0
+                                MDScreen:
+                                    MDIconButton:
+                                        icon: "indian1.png"
+                                        pos_hint: {"center_x": .1, "center_y": .5}
+                                        #heme_text_color: "Custom"
+                                        #text_color: "#6861ce"
+                                        #color:"#30c43b"
+
+                                        icon_size:" 40sp"
+                                    Label:
+                                        text:"207 Packing List"
+                                        pos_hint: {"center_x": .35,"center_y":.8}
+                                        font_size:17
+                                        #color:"white"
+
+                                    Label:
+                                        text:"0 waiting Bill"
+                                        pos_hint: {"center_x": .31,"center_y":.5}
+                                        font_size:17
+                                        color:"#6c5c53"
+                                    Label:
+                                        text:"191 waiting Payments"
+                                        pos_hint: {"center_x": .39,"center_y":.2}
+                                        font_size:17
+                            MDCard:
+                                md_bg_color:"#202940"
+                                spacing:0
+                                padding:0
+                                MDScreen:
+
+                                    MDIconButton:
+                                        icon: "indian1.png"
+                                        pos_hint: {"center_x": .1, "center_y": .5}
+                                        #heme_text_color: "Custom"
+                                        #text_color: "#6861ce"
+                                        #color:"#30c43b"
+
+                                        icon_size:" 40sp"
+                                    Label:
+                                        text:"2085 Bill Entry"
+                                        pos_hint: {"center_x": .33,"center_y":.8}
+                                        font_size:17
+                                        #color:"white"
+
+                                    Label:
+                                        text:"512 waiting Bill"
+                                        pos_hint: {"center_x": .335,"center_y":.5}
+                                        font_size:17
+                                        color:"#6c5c53"
+                                    Label:
+                                        text:"1483 waiting Payments"
+                                        pos_hint: {"center_x": .41,"center_y":.2}
+                                        font_size:17
+
+                        MDCard:
+                            md_bg_color:"#1A2035"
+                            spacing:10
+                            padding:10
+                            size_hint_y:None
+                            height: 400
+                            orientation: 'vertical'
+                            MDCard:
+                                md_bg_color:"#202940"
+                                spacing:0
+                                padding:0
+                                #size_hint_y:.7
+                                MDScreen:
+                                    Label:
+                                        text:"Total income statistics"
+                                        pos_hint: {"center_x": .21,"center_y":.9}
+                                        font_size:17
+                                        #color:"white"
+
+                                    Label:
+                                        text:"TOTAL INCOME"
+                                        pos_hint: {"center_x": .13,"center_y":.8}
+                                        font_size:15
+                                        color:"#2dad38"
+                                    Label:
+                                        text:"00.0"
+                                        pos_hint: {"center_x": .06,"center_y":.7}
+                                        font_size:19
+
+                        MDCard:
+                            md_bg_color:"#1A2035"
+                            spacing:10
+                            padding:10
+                            size_hint_y:None
+                            height: 400
+                            orientation: 'vertical'
+                            MDCard:
+                                md_bg_color:"#202940"
+                                spacing:0
+                                padding:0
+                                #size_hint_y:.7
+                                MDScreen:
+                                    Label:
+                                        text:"Total spend statistics"
+                                        pos_hint: {"center_x": .21,"center_y":.9}
+                                        font_size:17
+                                        #color:"white"
+
+                                    Label:
+                                        text:"TOTAL SPEND"
+                                        pos_hint: {"center_x": .13,"center_y":.8}
+                                        font_size:15
+                                        color:"#be4d59"
+                                    Label:
+                                        text:"0.00"
+                                        pos_hint: {"center_x": .06,"center_y":.7}
+                                        font_size:19
+
+
+                        MDCard:
+                            md_bg_color:"#1A2035"
+                            spacing:10
+                            padding:10
+                            size_hint_y:None
+                            height: 700
+                            #orientation: 'vertical'
+                            MDCard:
+                                md_bg_color:"#202940"
+                                orientation: 'vertical'
+                                MDScreen:
+                                    id:bar
+
+                                    Label:
+                                        text:"Annual Income & Spend Statistics"
+                                        pos_hint: {"center_x": .3,"center_y":.95}
+                                        font_size:17
+                                        #color:"white"
+
+                                    Label:
+                                        text:"TOTAL INCOME"
+                                        pos_hint: {"center_x": .13,"center_y":.9}
+                                        font_size:15
+                                        color:"#be4d59"
+                                    Label:
+                                        text:"0.00"
+                                        pos_hint: {"center_x": .06,"center_y":.85}
+                                        font_size:19
+                                    Label:
+                                        text:"TOTAL SPEND"
+                                        pos_hint: {"center_x": .13,"center_y":.8}
+                                        font_size:15
+                                        color:"#be4d59"
+                                    Label:
+                                        text:"0.00"
+                                        pos_hint: {"center_x": .06,"center_y":.75}
+                                        font_size:19
+            Screen:
+                name:"scr2"
+
+                MDCard:
+                    md_bg_color:"#1A2035"
+                    spacing:10
+                    padding:10
+                    size_hint_y:None
+                    height: 700
+                    orientation: 'vertical' 
+                    MDCard:
+                        md_bg_color:"#202940"
+                        #orientation: 'vertical'
+                        Label:
+                            text:"Annual Income & Spend Statistics"
+                            pos_hint: {"center_x": .5,"center_y":.95}
+                            font_size:17
+                            #color:"white"
+
+                        MDRaisedButton
+                            text:"press"
+                            pos_hint: {"center_x": .5,"center_y":.9}
+                            on_press:
+                                root.sam()
+                        MDTextField:
+                            id:gettxt
+                            hint_text:"pls enter"
+                            pos_hint: {"center_x": .5,"center_y":.8}
+
+
+
+                    MDBoxLayout:
+                        md_bg_color:"#202940"
+                        #orientation: 'vertical'
+                            
+                        MDList:
+                            id:put
+
+
+
+
+
+
+    
+        MDNavigationDrawer:
+            id: nav_drawer
+           # type:"standard"
+            md_bg_color:"#1A2035"
+            ScrollView:
+                sc:sc
+                nav_drawer:nav_drawer
+
+
+                MDGridLayout:
+                    id: box
+                    cols: 1
+                    size_hint_y: None
+                    height: self.minimum_height
+                    md_bg_color:"#1A2035"
